@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "id": "knicefire.screen-focus",
+  "name": "Screen focus",
+  "version": "1.0.0",
+  "author": "knicefire",
+  "description": "This screen's workspace number, marked when the screen has focus",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "ScreenFocus.qml"
+  },
+  "barWidget": {
+    "displayName": "Screen focus",
+    "description": "This screen's workspace number, marked when the screen has focus",
+    "category": "Compositor",
+    "allowMultiple": false,
+    "schema": [
+      {
+        "key": "hideWhenSingleScreen",
+        "type": "boolean",
+        "label": "Hide with one screen",
+        "defaultValue": true,
+        "description": "Hide the widget while only one monitor is connected, since there is nothing to distinguish."
+      },
+      {
+        "key": "inactiveOpacity",
+        "type": "integer",
+        "label": "Unfocused dim (%)",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "defaultValue": 100,
+        "description": "Extra fade on screens that are not focused. The number is already drawn in the theme's muted colour there; 100 leaves it at that."
+      },
+      {
+        "key": "pillWidth",
+        "type": "integer",
+        "label": "Badge width",
+        "min": 0,
+        "max": 40,
+        "step": 1,
+        "defaultValue": 26,
+        "description": "Width of the badge behind the number, before the spacing scale."
+      },
+      {
+        "key": "pillHeight",
+        "type": "integer",
+        "label": "Badge height",
+        "min": 0,
+        "max": 40,
+        "step": 1,
+        "defaultValue": 18,
+        "description": "Height of the badge. The horizontal bar is 26px tall, so keep some room."
+      },
+      {
+        "key": "pillRadius",
+        "type": "integer",
+        "label": "Badge corner",
+        "min": 0,
+        "max": 40,
+        "step": 1,
+        "defaultValue": 7,
+        "description": "Corner radius. Half the height gives a full stadium; less gives a rounded rectangle."
+      }
+    ]
+  }
+}
